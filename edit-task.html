@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Helpdesk - Edit Task</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+
+        <h1>Mini Helpdesk</h1>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <main class="dashboard-container">
+
+        <div class="form-page">
+
+            <h2>Edit Task</h2>
+
+            <p class="dashboard-subtitle">
+                Update task information
+            </p>
+
+
+            <form id="editTaskForm">
+
+                <div class="form-group">
+
+                    <label for="editTitle">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="editTitle"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="editDescription"
+                        rows="5"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editStatus">
+                        Status
+                    </label>
+
+                    <select id="editStatus">
+
+                        <option value="Open">Open</option>
+
+                        <option value="In Progress">
+                            In Progress
+                        </option>
+
+                        <option value="On Hold">
+                            On Hold
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="editPriority">
+                        Priority
+                    </label>
+
+                    <select id="editPriority">
+
+                        <option value="Low">Low</option>
+
+                        <option value="Medium">Medium</option>
+
+                        <option value="High">High</option>
+
+                        <option value="Critical">
+                            Critical
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-buttons">
+
+                    <button
+                        type="submit"
+                        class="create-task-btn"
+                    >
+                        Save Changes
+                    </button>
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        onclick="goBack()"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function logout() {
+
+            window.location.href = "index.html";
+
+        }
+
+
+        function goBack() {
+
+            window.location.href = "dashboard.html";
+
+        }
+
+    </script>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Helpdesk - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <h1>Mini Helpdesk</h1>
+
+        <button class="logout-btn" onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="dashboard-container">
+
+        <h2>Dashboard</h2>
+
+        <p class="dashboard-subtitle">
+            Manage and track your tasks
+        </p>
+
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-cards">
+
+            <div class="dashboard-card">
+
+                <h3>Total Tasks</h3>
+
+                <p id="totalTasks">0</p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>Open</h3>
+
+                <p id="openTasks">0</p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>In Progress</h3>
+
+                <p id="progressTasks">0</p>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <h3>Completed</h3>
+
+                <p id="completedTasks">0</p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Task Section -->
+        <section class="task-section">
+
+            <div class="task-section-header">
+
+                <h2>Tasks</h2>
+
+                <button
+                    class="create-task-btn"
+                    onclick="goToCreateTask()"
+                >
+                    + Create Task
+                </button>
+
+            </div>
+
+
+            <!-- Tasks will be added here by JavaScript -->
+            <div id="taskList"></div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Dashboard JavaScript -->
+    <script>
+
+        function logout() {
+
+            window.location.href = "index.html";
+
+        }
+
+
+        function goToCreateTask() {
+
+            window.location.href = "create-task.html";
+
+        }
+
+    </script>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
